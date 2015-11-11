@@ -1,0 +1,30 @@
+{% extends "DTMUIBundle:Layouts:base.html.twig" %}
+
+{% block mainmenu %}
+	{% embed "DTMUIBundle:Layouts:header.html.twig" %}
+
+	{% endembed %}
+
+{% endblock %}
+
+{% block footer %}
+	{% embed "DTMUIBundle:Layouts:footer.html.twig" %}
+
+	{% endembed %}
+
+{% endblock %}
+
+{% block sidebar %}
+	{% embed "DTMUIBundle:Layouts:sidebar.html.twig" %}
+
+	{% endembed %}
+
+{% endblock %}
+
+{% block content %}
+	
+	{% embed "DTMUIBundle:Layouts:content.html.twig" %}
+
+	{% endembed %}
+
+{% endblock %}

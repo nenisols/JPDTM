@@ -1,0 +1,5 @@
+dtmui_homepage:
+    # path:     /hello/{name}
+    # defaults: { _controller: DTMUIBundle:Default:index }
+    resource: "@DTMUIBundle/Controller/"
+    type:     annotation

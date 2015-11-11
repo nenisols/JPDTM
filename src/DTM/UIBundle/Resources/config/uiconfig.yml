@@ -1,0 +1,22 @@
+ROLE_USER:
+  menu:
+    menu_item1:
+      href: "#"
+      caption: "Display"
+    menu_item2:
+      href: "#"
+      caption: "Functions"
+ROLE_ADMIN:
+ menu:
+    menu_item1:
+      href: "#"
+      caption: "Display"
+    menu_item2:
+      href: "#"
+      caption: "Functions"
+ROLE_ANONYMOUS:
+ menu:
+    menu_item1:
+      href: "#"
+      caption: "Sign up"
+

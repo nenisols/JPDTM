@@ -1,0 +1,5 @@
+dtm_task_db_homepage:
+    # path:     /hello/{name}
+    # defaults: { _controller: DTMTaskDBBundle:Default:index }
+    resource: "@DTMTaskDBBundle/Controller/"
+    type:     annotation

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>
+		{% block title %}{% endblock %}
+		</title>
+		{% block stylesheets %}{% endblock %}
+		
+	</head>
+	<body fullbleed unresolved>
+		{% block mainmenu %}{% endblock %}
+			{# <div class="container-fluid">
+				<div class="row">
+				  	<div class="col-md-2 ">
+						{% block sidebar %}{% endblock %}
+					</div>
+					<div class="col-md-10 ">
+						{# <h1 class="page-header">Api Test Client</h1> #}
+						{# <div class="row placeholders" id="content">
+							{% for flashMessage in app.session.flashbag.get('error') %}
+		                      <div class="alert alert-danger fade in">
+		                          <a href="#" class="close" data-dismiss="alert">&times;</a>
+		                          <strong>Error!</strong> {{ flashMessage }}
+		                      </div>                      
+		                  	{% endfor %}
+
+			                  {% for flashMessage in app.session.flashbag.get('success') %}
+			                      <div class="alert alert-success fade in">
+			                          <a href="#" class="close" data-dismiss="alert">&times;</a>
+			                          <strong>Success!</strong> {{ flashMessage }}
+			                      </div>   
+			                  {% endfor %}
+							{% block content %}{% endblock %}						
+
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				 	{% block footer %}{% endblock %}	
+				</div>	
+			</div> #} 
+		{% block javascripts %}{% endblock %}
+	</body>
+</html>

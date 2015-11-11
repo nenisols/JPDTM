@@ -1,0 +1,4 @@
+services:
+#    dtm_task_db.example:
+#        class: DTM\TaskDBBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

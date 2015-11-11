@@ -1,0 +1,8 @@
+services:
+#    dtmui.example:
+#        class: DTM\UIBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+     dtm.uimgr:
+        class: DTM\UIBundle\UILogic\UIManager
+        arguments:
+               - @file_locator

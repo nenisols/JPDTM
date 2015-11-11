@@ -1,0 +1,25 @@
+<div class="panel-body">	
+	<blockquote>
+		<h3> <samp>{{data}} </samp></h3>
+	</blockquote>		
+	{% if userinfo is defined %}
+		<div class="row-fluid">
+			<div class="col-md-5">
+				<div class="panel panel-primary com-md-3">
+					<div class="panel-heading clearfix">
+						<h3 class="panel-title pull-left">User Details</h3>
+					</div>
+					<div class="panel-body">
+						<dl class="dl-horizontal">
+							{% for key, value in userinfo %}
+				  				<dt>{{key}}:</dt>
+				  				<dd>{{value}}</dd>
+			  				{% endfor %}
+						</dl>				
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+</div>
+

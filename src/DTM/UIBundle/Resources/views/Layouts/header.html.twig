@@ -1,0 +1,582 @@
+{% block mainmenu %}
+	<style is="custom-style">
+      #paperDrawerPanel [main] {
+        background-color: var(--google-grey-100);
+      }
+      #paperDrawerPanel [drawer] {
+        border-right: 1px solid var(--google-grey-300);
+      }
+      #paperDrawerPanel[right-drawer] [drawer] {
+        border-left: 1px solid var(--google-grey-300);
+      }
+      paper-button {
+        color: white;
+        margin: 10px;
+        background-color: var(--google-blue-700);
+        white-space: nowrap;
+      }
+      paper-toolbar.pink {
+      --paper-toolbar-background: #E91E63;
+    }
+    paper-toolbar.purple{
+      --paper-toolbar-background: #9C27B0;
+    }
+    paper-card {
+      
+      width:95%;
+      margin: 10px;
+      height: 100%;
+      padding: 20px;
+    }
+    paper-icon-item{
+      padding-top: 30px;      
+      margin-bottom: 10px;
+    }
+    .list {
+      padding-top: 12px;
+      background-color: white;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      
+      @apply(--shadow-elevation-2dp);
+    }
+    .short {
+      padding-top: 12px;
+      height: 216px;
+    }
+    h4 {
+      margin-left: 24px;
+    }
+    .avatar {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #ccc;
+      margin-right:40px;
+    }
+    .blue {
+      background-color: var(--paper-light-blue-300);
+    }
+    .red {
+      background-color: var(--paper-red-300);
+    }
+    .orange {
+      background-color: var(--paper-amber-300);
+    }
+    .green {
+      background-color: var(--paper-green-300);
+    }
+    </style>
+    {# <paper-drawer-panel id="paperDrawerPanel">
+      <div drawer></div>
+      <div main>
+        <div>
+          <paper-button onclick="flipDrawer()" raised>flip drawer</paper-button>
+        </div>
+        <div>
+          <paper-button paper-drawer-toggle raised>toggle drawer</paper-button>
+        </div>
+      </div>
+    </paper-drawer-panel> #}
+    <paper-drawer-panel id="paperDrawerPanel">
+      <paper-header-panel drawer navigation flex>
+        <paper-toolbar class="pink tall">
+          <!-- an avatar and username will be here -->  
+          <div class="layout horizontal flex">
+            <div class="flex" >Dialy Task Management</div>
+            <div>
+                <iron-icon icon="account-circle"></iron-icon>
+                <span>2</span> 
+            </div>
+          </div>        
+        </paper-toolbar>
+        <div class="ui segment">
+  <div class="ui relaxed divided list">
+  <div class="item">
+    <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+    <div class="content">
+      <a class="header">Daniel Louise</a>
+      <div class="description">Last seen watching  just now.</div>
+    </div>
+  </div>
+  <div class="item">
+    <img class="ui avatar image" src="/images/avatar/small/stevie.jpg">
+    <div class="content">
+      <a class="header">Stevie Feliciano</a>
+    </div>
+  </div>
+  <div class="item">
+    <img class="ui avatar image" src="/images/avatar/small/elliot.jpg">
+    <div class="content">
+      <a class="header">Elliot Fu</a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="ui segments">
+  <div class="ui segment">
+    <p>Top</p>
+  </div>
+  <div class="ui segments">
+    <div class="ui segment">
+      <p>Nested Top</p>
+    </div>
+    <div class="ui segment">
+      <p>Nested Middle</p>
+    </div>
+    <div class="ui segment">
+      <p>Nested Bottom</p>
+    </div>
+  </div>
+  <div class="ui segment">
+    <p>Middle</p>
+  </div>
+  <div class="ui horizontal segments">
+    <div class="ui segment">
+      <p>Top</p>
+    </div>
+    <div class="ui segment">
+      <p>Middle</p>
+    </div>
+    <div class="ui segment">
+      <p>Bottom</p>
+    </div>
+  </div>
+  <div class="ui segment">
+    <p>Bottom</p>
+  </div>
+</div>
+        {# <div class="list" role="listbox">
+        <paper-icon-item class="layout horizontal">
+          <div class="avatar blue" item-icon></div>
+          <paper-item-body two-line>
+            <div>Running Tasks</div>
+            <div secondary>Jan 9, 2014</div>
+          </paper-item-body>
+          <paper-icon-button icon="task" alt="favourite this!"></paper-icon-button>
+        </paper-icon-item>
+        <paper-icon-item class="layout horizontal">
+          <div class="avatar red" item-icon></div>
+          <div class="flex">Alphonso</div>
+          <iron-icon icon="communication:chat"></iron-icon>
+        </paper-icon-item>
+        <paper-icon-item class="layout horizontal">
+          <iron-icon icon="communication:phone" item-icon></iron-icon>
+          <paper-item-body two-line>
+            <div>(650) 555-1234</div>
+            <div secondary>Mobile</div>
+          </paper-item-body>
+        </paper-icon-item>
+        <paper-icon-item class="layout horizontal ">
+          <iron-icon icon="communication:email" item-icon></iron-icon>
+          <paper-item-body two-line>
+            <div>alphonso@example.com</div>
+            <div secondary>Personal</div>
+          </paper-item-body>
+        </paper-icon-item >
+      </div> #}
+      </paper-header-panel> 
+
+      <paper-header-panel main>
+        <paper-toolbar class="purple">
+          <paper-icon-button icon="home"></paper-icon-button>
+          <span>Home</span>
+          <div class="flex"></div>
+          <paper-icon-button icon="add">+</paper-icon-button>
+          <div class="bottom fit" style="height: 20px; background-color: #AB47BC;"></div>
+        </paper-toolbar>
+        <paper-card heading="divider">  
+        <div class="ui two column middle aligned very relaxed stackable grid">
+  <div class="column">
+    <div class="ui form">
+      <div class="field">
+        <label>Username</label>
+        <div class="ui left icon input">
+          <input type="text" placeholder="Username">
+          <i class="user icon"></i>
+        </div>
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <div class="ui left icon input">
+          <input type="password">
+          <i class="lock icon"></i>
+        </div>
+      </div>
+      <div class="ui blue submit button">Login</div>
+    </div>
+  </div>
+  <div class="ui vertical divider">
+    Or
+  </div>
+  <div class="center aligned column">
+    <div class="ui big green labeled icon button">
+      <i class="signup icon"></i>
+      Sign Up
+    </div>
+  </div>
+</div>
+</paper-card>
+        <paper-material elevation="5">
+        <div class="layout horizontal">
+        <paper-card heading="Some cards only have titles" > 
+
+          <table class="ui compact celled definition inverted teal table">
+  <thead class="full-width">
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Registration Date</th>
+      <th>E-mail address</th>
+      <th>Premium Plan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="collapsing">
+        <div class="ui fitted slider checkbox">
+          <input type="checkbox"> <label></label>
+        </div>
+      </td>
+      <td><div class="ui ribbon label">John Lilki</div></td>
+      <td>September 14, 2013</td>
+      <td>jhlilk22@yahoo.com</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td class="collapsing">
+        <div class="ui fitted slider checkbox">
+          <input type="checkbox"> <label></label>
+        </div>
+      </td>
+      <td>Jamie Harington</td>
+      <td>January 11, 2014</td>
+      <td>jamieharingonton@yahoo.com</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td class="collapsing">
+        <div class="ui fitted slider checkbox">
+          <input type="checkbox"> <label></label>
+        </div>
+      </td>
+      <td>Jill Lewis</td>
+      <td>May 11, 2014</td>
+      <td>jilsewris22@yahoo.com</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+  <tfoot class="full-width">
+    <tr>
+      <th></th>
+      <th colspan="4">
+        <div class="ui right floated small primary labeled icon button">
+          <i class="user icon"></i> Add User
+        </div>
+        <div class="ui small button">
+          Approve
+        </div>
+        <div class="ui small  disabled button">
+          Approve All
+        </div>
+      </th>
+    </tr>
+  </tfoot>
+</table>        
+          <paper-input class="flex" label="Type message..." id="input" value=""></paper-input>
+          <paper-fab icon="send" id="sendButton" ></paper-fab>   
+          <div class="ui attached message">
+  <div class="header">
+    Welcome to our site!
+  </div>
+  <p>Fill out the form below to sign-up for a new account</p>
+</div>
+<form class="ui form attached fluid segment">
+  <div class="two fields">
+    <div class="field">
+      <label>First Name</label>
+      <input placeholder="First Name" type="text">
+    </div>
+    <div class="field">
+      <label>Last Name</label>
+      <input placeholder="Last Name" type="text">
+    </div>
+  </div>
+  <div class="field">
+    <label>Username</label>
+    <input placeholder="Username" type="text">
+  </div>
+  <div class="field">
+    <label>Password</label>
+    <input type="password">
+  </div>
+  <div class="inline field">
+    <div class="ui checkbox">
+      <input type="checkbox" id="terms">
+      <label for="terms">I agree to the terms and conditions</label>
+    </div>
+  </div>
+  <div class="ui blue submit button">Submit</div>
+</form>
+<div class="ui bottom attached warning message">
+  <i class="icon help"></i>
+  Already signed up? <a href="#">Login here</a> instead.
+</div>
+        {# </paper-card> #}
+
+        {# <paper-card heading="Some cards only have titles" >  #}
+        <div class="ui ordered steps">
+  <div class="completed step">
+    <div class="content">
+      <div class="title">Shipping</div>
+      <div class="description">Choose your shipping options</div>
+    </div>
+  </div>
+  <div class="completed step">
+    <div class="content">
+      <div class="title">Billing</div>
+      <div class="description">Enter billing information</div>
+    </div>
+  </div>
+  <div class="active step">
+    <div class="content">
+      <div class="title">Confirm Order</div>
+      <div class="description">Verify order details</div>
+    </div>
+  </div>
+</div>
+{# </paper-card>
+
+</div>
+<div class="layout horizontal">
+  <div>
+      <paper-card heading="divider"> #}
+      
+    {# </paper-card>
+  </div>
+  <div>
+    <paper-card heading="Some cards only have titles" >  #}
+<div class="ui card">
+  <div class="content">
+    <div class="header">Project Timeline</div>
+  </div>
+  <div class="content">
+    <h4 class="ui sub header">Activity</h4>
+    <div class="ui small feed">
+      <div class="event">
+        <div class="content">
+          <div class="summary">
+             <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
+          </div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="content">
+          <div class="summary">
+             <a>Stevie Feliciano</a> was added as an <a>Administrator</a>
+          </div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="content">
+          <div class="summary">
+             <a>Helen Troy</a> added two pictures
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="extra content">
+    <button class="ui button">Join Project</button>
+    </div>
+</div>
+  </paper-card>
+{# </div>
+
+<div>#}
+  <paper-card heading = "header"> 
+  <h4 class="ui horizontal divider header">
+  <i class="tag icon"></i>
+  Description
+</h4>
+<p>Doggie treats are good for all times of the year. Proven to be eaten by 99.9% of all dogs worldwide.</p>
+<h4 class="ui horizontal divider header">
+  <i class="bar chart icon"></i>
+  Specifications
+</h4>
+<table class="ui definition table">
+  <tbody>
+    <tr>
+      <td class="two wide column">Size</td>
+      <td>1" x 2"</td>
+    </tr>
+    <tr>
+      <td>Weight</td>
+      <td>6 ounces</td>
+    </tr>
+    <tr>
+      <td>Color</td>
+      <td>Yellowish</td>
+    </tr>
+    <tr>
+      <td>Odor</td>
+      <td>Not Much Usually</td>
+    </tr>
+  </tbody>
+</table>
+</paper-card>
+</div>
+    <paper-card heading="rail">
+    <div class="ui card" >
+    <div class="ui segment">
+  <div class="ui left dividing rail">
+    <div class="ui segment">
+      Left Rail Content
+    </div>
+  </div>
+  <div class="ui right dividing rail">
+    <div class="ui segment">
+      Right Rail Content
+    </div>
+  </div>
+  <p><h2 class="ui icon header">
+  <i class="settings icon"></i>
+  <div class="content">
+    Account Settings
+    <div class="sub header">Manage your account settings and set e-mail preferences.</div>
+  </div>
+</h2></p>
+  <p></p>
+</div>
+</div>
+</paper-card>
+<paper-card header="form">
+<form class="ui form">
+  <h4 class="ui dividing header">Shipping Information</h4>
+  <div class="field">
+    <label>Name</label>
+    <div class="two fields">
+      <div class="field">
+        <input type="text" name="shipping[first-name]" placeholder="First Name">
+      </div>
+      <div class="field">
+        <input type="text" name="shipping[last-name]" placeholder="Last Name">
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <label>Billing Address</label>
+    <div class="fields">
+      <div class="twelve wide field">
+        <input type="text" name="shipping[address]" placeholder="Street Address">
+      </div>
+      <div class="four wide field">
+        <input type="text" name="shipping[address-2]" placeholder="Apt #">
+      </div>
+    </div>
+  </div>
+  <div class="two fields">
+    <div class="field">
+      <label>State</label>
+      <select class="ui fluid dropdown">
+        <option value="">State</option>
+    <option value="AL">Alabama</option>
+    <option value="AK">Alaska</option>
+    <option value="AZ">Arizona</option>
+</paper-card>
+</div>
+</div>
+      </paper-material>
+       
+      </paper-header-panel>
+
+    </paper-drawer-panel>
+
+    <script>
+      (function(global) {
+        'use strict';
+        var DRAWER_ATTR = 'right-drawer';
+        var pdp = document.getElementById('paperDrawerPanel');
+        global.flipDrawer = function() {
+          if (pdp.hasAttribute(DRAWER_ATTR)) {
+            pdp.removeAttribute(DRAWER_ATTR);
+          } else {
+            pdp.setAttribute(DRAWER_ATTR, '');
+          }
+        }
+      }(this));
+    </script>
+	{# <paper-drawer-panel id="paperDrawerPanel">
+      <div drawer></div>
+      <div main>
+        <div>
+          <paper-button onclick="flipDrawer()" raised>flip drawer</paper-button>
+        </div>
+        <div>
+          <paper-button paper-drawer-toggle raised>toggle drawer</paper-button>
+        </div>
+      </div>
+    </paper-drawer-panel> #}
+
+    
+
+	
+	{# <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Passport API Client</a>
+		</div>
+	
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active">
+					<button type="button" class="btn btn-primary navbar-btn" aria-label="Left Align">
+						<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+						<a href="/home">Home</a>
+					</button>					
+				</li>
+							
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<!-- build the navigation tree -->
+				{% set navigation = uimanager.getData('Menu') %}
+				{{dump(navigation)}}
+				{% for item in navigation %}
+					<li>
+						<button type="button" class="btn btn-default navbar-btn" aria-label="Left Align">
+							<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+							<a href="{{item.href}}">{{item.caption}}</a>
+						</button>						
+					</li>
+
+				{% endfor %}	
+
+				{% if uimanager.getUserName() != 'anon' %}
+					<li><p class="navbar-text">Signed in as <a href="#" class="navbar-link">{{uimanager.getUserName()}}</a></p></li>
+				{% endif %}
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Account<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							{# <li onclick="$(#content).load("/login");">Login</li>
+						{% if uimanager.getUserName() == 'anon' %}	
+							<li><a href="login">Login</a></li>	
+						{% else %}				
+							<li role="seperator" class="divider"></li>
+							<li class="active"><a href="{# {logout_path(app.security.token.providerKey)}">Logout</a></li>
+						{% endif %}							
+						</ul>
+					</li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</nav>	 #} 
+{% endblock %}
